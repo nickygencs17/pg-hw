@@ -1,0 +1,13 @@
+module.exports = {
+    TRIP_STAUTS_INITIATED : 1000,
+    BASE_PRICE : 100.00,
+    ALLERGIES : .01,
+    SLEEP_APNEA : .06,
+    HEART_DISEASE : .17,
+    NUMBER_OF_YEARS : 5,
+    STARTING_AGE : 18,
+    COST_PER_NUMBER_OF_YEAR_INCREMENT : 20,
+    SEPARATOR : ' - $',
+    NDERAGE : 'UNDERAGE'
+    
+}
