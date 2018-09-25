@@ -1,21 +1,23 @@
 const frisby = require('frisby');
 
-const url = 'http://localhost:3000/'
+const url = 'http://localhost:3000/tacoservice'
 
-it('it\'s all okay', function () {
-  return frisby.get(url)
+it('GET Valid case should return a status of 200 OK', function () {
+  return frisby
+    .get(url + '?name=Kelly&age=50&gender=female&condition=Allergies')
     .expect('status', 200);
 });
 
-it ('GET should return a status of 200 OK', function () {
+it('GET InValid case should return a status of 500 BAD REQUEST', function () {
   return frisby
-    .get(url,{
-      title: 'My New Blog Post',
-      content: '<p>A cool blog post!</p>'
-    }).expect('status', 200);
+    .get(url + '?name=Kelly&age=50&gender=female')
+    .expect('status', 500);
 });
 
-it ('GET should return a status of 404 NOT FOUND', function () {
+it('GET should return a status of 404 NOT FOUND', function () {
   return frisby
-    .get(url+'NotFound').expect('status', 404);
+    .get(url + 'NotFound').expect('status', 404);
 });
+
+
+

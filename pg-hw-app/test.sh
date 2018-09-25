@@ -12,5 +12,5 @@
 
 
 curl "http://localhost:3000/tacoservice?name=Kelly&age=50&gender=female&condition=Allergies"
-curl "http://localhost:3000/tacoservice?name=Josh&age=40&gender=male&condition=Sleep%20Apnea"
+curl "http://localhost:3000/tacoservice?name=clearJosh&age=40&gender=male&condition=Sleep%20Apnea"
 curl "http://localhost:3000/tacoservice?name=Brad&age=20&gender=male&condition=Heart%20Disease"
